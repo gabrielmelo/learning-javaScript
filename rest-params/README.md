@@ -1,4 +1,4 @@
-# Rest params
+# Rest parameter
 
 Permite representar um número indefinido de argumentos como um array. Se o último argumento de um função tiver o prefixo `...` ele irá se tornar um array. Ideal para quando não sabemos quantos argumentos serão passados em um função
 
@@ -9,3 +9,6 @@ const multiply = (multiplier, ...numbers) => {
 
 console.log(multiply(2, 2, 4, 6)) // > Array(3) [ 4, 8, 12 ]
 ```
+
+## References
+[MDN Web Docs: Rest parameter](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters)
