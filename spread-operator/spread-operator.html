@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spread operator</title>
+</head>
+
+<script>
+  // Use 1
+  const front = ['html', 'css', 'js']
+  console.log(front)
+  console.log('Spread operator: ', ...front)
+
+  // Use 2
+  const makeSandwich = (bread, cheese, souce) => console.log(`Your sandwich with: ${bread} bread, ${cheese} cheese and ${souce} is done!`)
+
+  const ingredients = ['white', 'cheddar', 'barbecue']
+  makeSandwich(...ingredients)
+</script>
+
+</html>
