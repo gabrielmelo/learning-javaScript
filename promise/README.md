@@ -25,3 +25,26 @@ defer
   .then((data) => console.log(data))
   .catch((error) => console.log(error))
 ```
+
+```js
+const currency = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve({ currency: 'euro', value: 3.50 })
+    }, 3000)
+  })
+
+  const countries = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(['Ireland', 'England', 'Scotland'])
+    }, 300)
+  })
+
+  Promise
+    .all([currency, countries])
+    .then((responses) => console.log(responses))
+
+  Promise
+    // First promise resolve
+    .race([currency, countries])
+    .then((responses) => console.log(responses))
+```
